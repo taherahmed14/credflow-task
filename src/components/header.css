@@ -1,0 +1,27 @@
+.navbar {
+    overflow: hidden;
+    background-color: brown;
+}
+
+.logo {
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    font-weight: 800;
+}
+
+.navbar > div:nth-child(2) {
+    display: flex;
+    float: right;
+    padding: 10px 15px;
+    font-weight: 800;
+}
+
+.links {
+    padding-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}

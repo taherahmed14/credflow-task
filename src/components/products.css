@@ -1,0 +1,99 @@
+.container {
+    margin-top: 2%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 21%);
+    grid-gap: 10px;
+}
+
+.productCard {
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 450px;
+}
+
+.productCard > div:nth-child(1) {
+    height: 300px;
+}
+
+.productCard > div:nth-child(1) > img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.productCard > div:nth-child(1) > img:hover {
+    padding: 5px;
+}
+
+.productCard > div:nth-child(2) {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.productCard > div:nth-child(2) > div:nth-child(1) {
+    font-style: italic;
+    font-size: 20px;
+    color: blueviolet;
+}
+
+.productCard > div:nth-child(3) > button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: skyblue;
+    color: white;
+    border: none;
+}
+
+.productCard > div:nth-child(3) > button:hover {
+    opacity: 50%;
+}
+
+.heading {
+    font-weight: 800;
+    font-size: 35px;
+    text-align: left;
+    padding: 20px 0 0 120px;
+}
+
+.btnDiv {
+    margin-top: 5%;
+    text-align: left;
+}
+
+.checkOutBtn {
+    text-decoration: none;
+    padding: 20px 100px;
+    margin-left: 10%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.checkOutBtn:hover {
+    opacity: 80%;
+}
+
+.confirmMessage {
+    margin-top: 20%;
+    font-size: 25px;
+    font-weight: 800;
+    color: blueviolet;
+    font-style: italic;
+}
+
+.pageBtn {
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: brown;
+    color: black;
+    border: none;
+    margin: 30px 10px;
+    cursor: pointer;
+}
+
+.pageBtn:hover {
+    opacity: 80%;
+}
