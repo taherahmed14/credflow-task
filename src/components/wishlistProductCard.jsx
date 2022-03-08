@@ -1,11 +1,4 @@
-export const WishlistProductCard = ({ product, wishlistProducts, setWishlistProducts }) => {
-
-    const handleDelete = (data) => {
-        let cart = JSON.parse(localStorage.getItem("wineWishList"));
-        let newCart = cart.filter(e => e.id !== data.id);
-        localStorage.setItem("wineWishList", JSON.stringify(newCart));
-        setWishlistProducts(JSON.parse(localStorage.getItem("wineWishList")));
-    }
+export const WishlistProductCard = ({ product, handleDelete }) => {
 
     return(
         <div className="productCard">
