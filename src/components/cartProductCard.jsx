@@ -21,7 +21,7 @@ export const CartProductCard = ({ product, cartProducts, setCartProducts }) => {
     return(
         <div className="productCard">
             <div>
-                <img src={product.image} />
+                <img src={product.image} alt="product" />
             </div>
             <div>
                 <div>{product.winery}</div>

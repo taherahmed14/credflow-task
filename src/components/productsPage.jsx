@@ -10,8 +10,11 @@ export const Products = () => {
 
     useEffect(() => {
         getProducts();
-        setWineProducts(allProducts.slice(prev, next));
     }, [allProducts]);
+
+    useEffect(() => {
+        setWineProducts(allProducts.slice(prev, next));
+    }, [allProducts, prev, next]);
 
     const getProducts = async () => {
         const baseURL = 'https://api.sampleapis.com/wines/reds';

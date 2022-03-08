@@ -22,7 +22,7 @@ export const SearchBox = () => {
     const [results, setResults] = useState([]);
     const [allProducts, setAllProducts] = useState([]);
 
-    const debounce = useDebounce(searchInput, 500);
+    const debounce = useDebounce(searchInput, 1000);
 
     useEffect(() => {
         getProducts();
@@ -45,7 +45,7 @@ export const SearchBox = () => {
         else {
             setResults([]);
         }
-    }, [debounce]);
+    }, [debounce, allProducts, searchInput]);
 
     return (
         <div className="searchContainer">

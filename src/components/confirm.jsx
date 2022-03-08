@@ -9,14 +9,14 @@ export const Confirmation = () => {
             setLoading(false);
         }, 5000);
 
-        return (() => {
+        return () => {
             clearTimeout(timer);
-        });
+        };
     }, []);
 
     return(
        <div>
-           {loading ? <img src="loader.gif" /> : 
+           {loading ? <img src="loader.gif" alt="loading" /> : 
            <div className="confirmMessage">
                Your Order has been successfully placed. Happy Shopping.
             </div>}
