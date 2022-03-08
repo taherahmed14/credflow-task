@@ -5,7 +5,7 @@ export const Confirmation = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        let timer = setTimeout(() => {
+        const timer = setTimeout(() => {
             setLoading(false);
         }, 5000);
 
