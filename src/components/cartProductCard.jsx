@@ -1,3 +1,5 @@
+
+
 export const CartProductCard = ({ product, handleDelete }) => {
 
     const addToWishlist = (data) => {

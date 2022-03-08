@@ -10,7 +10,7 @@ export const Products = () => {
 
     useEffect(() => {
         getProducts();
-    }, [allProducts]);
+    }, []);
 
     useEffect(() => {
         setWineProducts(allProducts.slice(prev, next));

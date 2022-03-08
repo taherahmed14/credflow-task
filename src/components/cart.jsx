@@ -6,12 +6,11 @@ import "./products.css";
 export const Cart = () => {
 
     const[cartProducts, setCartProducts] = useState([]);
-
+    
     console.log(cartProducts);
 
     useEffect(() => {
-        let arr = JSON.parse(localStorage.getItem("wineCart"));
-        setCartProducts([arr]);
+        setCartProducts(JSON.parse(localStorage.getItem("wineCart")));
     }, []);
 
     const handleDelete = (data) => {
@@ -24,18 +23,20 @@ export const Cart = () => {
     return(
         <div>
             {cartProducts === null ? <div className="heading">Your Cart</div> :
-                <div>
-                    <div className="heading">Your Cart</div>
-                    <div className="container">
-                        {cartProducts.map((e) => (
-                            <CartProductCard key={e.id} product={e} handleDelete={handleDelete} />
-                        ))}
-                    </div>
-                    <div className="btnDiv">
-                        <Link to={"/checkout"} className="checkOutBtn">Checkout</Link>
-                    </div>
+            <div>
+                <div className="heading">Your Cart</div>
+                <div className="container">
+                    {cartProducts.map((e) => (
+                        <CartProductCard key={e.id} product={e} handleDelete={handleDelete} />
+                ))}
                 </div>
+            </div>
             }
+
+            <div className="btnDiv">
+                <Link to={"/checkout"} className="checkOutBtn">Checkout</Link>
+            </div>  
+
         </div>
     )
 };
